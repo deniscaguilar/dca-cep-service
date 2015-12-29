@@ -1,5 +1,6 @@
 package br.com.dca.cep.web;
 
+import br.com.dca.cep.exception.ErrorResource;
 import br.com.dca.cep.exception.ResourceNotFoundException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -10,8 +11,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
-
-import br.com.dca.cep.exception.ErrorResource;
 
 @ControllerAdvice
 public class CepExceptionHandlerController extends ResponseEntityExceptionHandler {
