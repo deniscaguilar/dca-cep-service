@@ -9,20 +9,19 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 @JsonSerialize
 public class ErrorResource {
 
-	private String code;
+	private Integer code;
 	private String message;
-	private List<FieldErrorResource> fieldErrors;
 
-	public ErrorResource(String code, String message) {
+	public ErrorResource(Integer code, String message) {
 		this.code = code;
 		this.message = message;
 	}
 
-	public String getCode() {
+	public Integer getCode() {
 		return code;
 	}
 
-	public void setCode(String code) {
+	public void setCode(Integer code) {
 		this.code = code;
 	}
 
@@ -32,14 +31,6 @@ public class ErrorResource {
 
 	public void setMessage(String message) {
 		this.message = message;
-	}
-
-	public List<FieldErrorResource> getFieldErrors() {
-		return fieldErrors;
-	}
-
-	public void setFieldErrors(List<FieldErrorResource> fieldErrors) {
-		this.fieldErrors = fieldErrors;
 	}
 
 }

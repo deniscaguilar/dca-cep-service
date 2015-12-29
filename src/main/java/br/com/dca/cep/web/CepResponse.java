@@ -74,6 +74,9 @@ public class CepResponse implements Serializable {
 	}
 
 	public Boolean isErro() {
+		if(erro == null){
+			return false;
+		}
 		return erro;
 	}
 
