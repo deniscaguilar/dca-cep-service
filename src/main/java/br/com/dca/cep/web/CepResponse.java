@@ -1,8 +1,6 @@
 package br.com.dca.cep.web;
 
-import java.io.Serializable;
-
-public class CepResponse implements Serializable {
+public class CepResponse {
 
 	private static final long serialVersionUID = 1L;
 
@@ -16,7 +14,7 @@ public class CepResponse implements Serializable {
 
 	private String uf;
 
-	private Boolean erro;
+	private boolean erro;
 
 	public CepResponse() {
 	}
@@ -29,7 +27,7 @@ public class CepResponse implements Serializable {
 		this.uf = uf;
 	}
 
-	public CepResponse(Boolean erro) {
+	public CepResponse(boolean erro) {
 		this.erro = erro;
 	}
 
@@ -73,14 +71,11 @@ public class CepResponse implements Serializable {
 		this.uf = uf;
 	}
 
-	public Boolean isErro() {
-		if(erro == null){
-			return false;
-		}
+	public boolean isErro() {
 		return erro;
 	}
 
-	public void setErro(Boolean erro) {
+	public void setErro(boolean erro) {
 		this.erro = erro;
 	}
 
